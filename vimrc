@@ -15,6 +15,9 @@
 " settings for git 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" remove unwantted whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
+
 :colorscheme railscasts2_hack
 
 " let g:nerdtree_tabs_open_on_console_startup=1
@@ -39,6 +42,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'slim-template/vim-slim.git'
 
 :syntax enable
 filetype plugin indent on     " required!
